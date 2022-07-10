@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding:0;
+}
+.gambar{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,10,0.77),rgba(4,9,30,0.7)),url(gambar/kampus.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
