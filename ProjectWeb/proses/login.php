@@ -11,6 +11,7 @@ $password = $_POST['password'];
 // ambil data user
 $user = $conn->query("SELECT * FROM `userdb` WHERE username = '$username'");
 if ($user->num_rows != 1) {
+
     header("Location: ../login.php");
     die();
 }
@@ -19,9 +20,12 @@ if ($user->num_rows != 1) {
 $user = $user->fetch_assoc();
 
 if ($password != $user['password']) {
+
     header("Location: ../login.php");
     die();
 } else {
+    $_SESSION['user'] = $user;
+
     header("Location: ../index.php");
     die();
 }

@@ -23,7 +23,7 @@ if ($user->num_rows > 0) {
 
 // cek password
 if ($password != $ulang_password) {
-    header("Location: ../register.php");
+    header("Location: ../register.php"); 
     die();
 }
 
