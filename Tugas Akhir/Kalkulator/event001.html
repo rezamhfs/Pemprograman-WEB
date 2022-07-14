@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script type="text/javascript">
+      function pesan() {
+        document.write("EVENT BERHASIL");
+      }
+      function hitung() {
+        var hit = document.nmform.teks.value;
+        document.getElementById("hasil1").innerHTML = hit
+        document.getElementById("hasil2").innerHTML = eval(hit);
+      }
+    </script>
+  </head>
+  <!-- onload="pesan()" //manggilnya di body didalam -->
+  <body>
+    <!-- onclick, onmouseover, onmouseout, onmouseup, onmousedown -->
+    <p>onClick</p>
+    <button onclick="pesan()">onClik</button><br /><br />
+    <p>onMouseDown</p>
+    <button onmousedown="pesan()">onMouseDown</button><br /><br />
+    <p>onMouseOver</p>
+    <button onmouseover="pesan()">onMouseOver</button><br /><br />
+    <p>onMouseOut</p>
+    <button onmouseout="pesan()">onMouseOut</button><br /><br />
+    <p>onMouseOut</p>
+    <button onmouseup="pesan()">onMOuseUp</button><br /><br />
+    <p>onFocus</p>
+    <button onfocus="pesan()">onFocus</button><br /><br />
+
+
+    <hr />
+    <!-- onchange -->
+    <br><br>
+    <form name="nmform">
+      <input type="text" name="teks" value="" />
+      <input type="button" value="Eksekusi" onclick="hitung()" />
+    </form>
+    <div> Hasilnya Adalah : <span id="hasil1"></span> = <span id="hasil2"></span></div>
+    <br><br>
+  </body>
+</html>
