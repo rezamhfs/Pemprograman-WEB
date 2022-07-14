@@ -12,7 +12,7 @@
 <body class="body">
     <div class="ctu">
         <h2>CONTACT US</h2>
-        <form action="proses/kontak-us.php" method="POST">
+        <form   name="myForm"  action="proses/kontak-us.php" onsubmit="return validateForm()" method="POST"   >
             <div>
                 <input type="text" name="nama" placeholder="Name">
          </div>
@@ -26,11 +26,14 @@
              <textarea name="pesan" placeholder="Message"></textarea>
          </div>
          <div>
-             <input type="submit" onclick="Swal.fire('DATA TERKIRIM')" name="" value="Submit">
+             <input type="submit"  name="" value="Submit">
          </div>
         </form>
      </div>
 
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="validation.js"></script>
+
+
+
 </body>
 </html>

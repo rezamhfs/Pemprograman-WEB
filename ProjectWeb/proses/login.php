@@ -26,6 +26,6 @@ if ($password != $user['password']) {
 } else {
     $_SESSION['user'] = $user;
 
-    header("Location: ../index.php");
+    header("Location: ../index.html");
     die();
 }

@@ -15,9 +15,10 @@ $sql = "INSERT INTO `contact-us`(`nama`, `email`, `subject`, `pesan`) VALUES ('$
 
 
 if ($conn->query($sql) === TRUE) {
-    $_SESSION['notif'] = "DATA TERKIRIM";
-    header("Location: ../index.php");
+
+    header("Location: ../index.html");
     
+
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 
